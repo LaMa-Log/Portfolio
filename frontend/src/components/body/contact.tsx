@@ -79,7 +79,7 @@ export default function Contact() {
         )
       }
 
-      <section className="w-full bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 transition-colors duration-300">
+      <section className="w-full mt-40 md:mt-40 lg:mt-0 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 transition-colors duration-300">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Infos de contact */}
           <div className="space-y-6">

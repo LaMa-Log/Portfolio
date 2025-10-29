@@ -129,7 +129,7 @@ export default function Experience() {
 
   return (
     <motion.section
-      className="flex flex-col items-center justify-center mb-30 px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all duration-300"
+      className="flex flex-col mt-40 md:mt-40 lg:mt-0 items-center justify-center mb-30 px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all duration-300"
       id="experience"
       data-name="Expérience"
       initial="hidden"

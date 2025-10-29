@@ -38,7 +38,7 @@ export default function Project() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      className="px-6 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+      className="px-6 mt-40 md:mt-40 lg:mt-0  bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
     >
       <motion.h1
         variants={fadeInUp}

@@ -34,6 +34,7 @@ export default function Navbar() {
           const name = visibleSection.target.getAttribute("data-name");
           setActiveItem(name);
 
+
         }
       },
       { threshold: 0.6 }
@@ -41,6 +42,7 @@ export default function Navbar() {
 
     navItems.forEach((item) => {
       const section = document.getElementById(item.id);
+      console.log(item.id)
       if (section) observer.observe(section);
     });
 
@@ -48,8 +50,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="bg-white dark:bg-neutral-800 shadow-md sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    <header className=" bg-neutral-800 shadow-md sticky top-0 z-50">
+      <nav className="max-w-7xl flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2 text-xl font-bold text-indigo-600 dark:text-white">
           <img src={logo} alt="logo" className="w-8 h-8 rounded-full" />
