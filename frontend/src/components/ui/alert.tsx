@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export const Alert = ({ children, type = "info", className = "" }) => {
   const types = {

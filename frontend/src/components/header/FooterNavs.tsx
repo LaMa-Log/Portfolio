@@ -1,7 +1,10 @@
-import React from 'react'
-import { FaArrowUp } from 'react-icons/fa'
 
-export default function FooterNavs({ scrollToTop }) {
+import { FaArrowUp } from 'react-icons/fa'
+interface FooterNavsProps {
+  scrollToTop: () => void;
+}
+
+export default function FooterNavs({ scrollToTop }: FooterNavsProps) {
   return (
     <button
       onClick={scrollToTop}

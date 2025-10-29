@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.tsx'
 import Home from './components/body/home.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './components/admin/login.tsx'
 import Competence from './components/body/competence.tsx'
 import Contact from './components/body/contact.tsx'
 import Experience from './components/body/experience.tsx'
@@ -17,7 +16,6 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="*" element={<App />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/admin" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/formation" element={<Experience />} />
         <Route path="/projects" element={<Project />} />

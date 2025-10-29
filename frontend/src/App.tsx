@@ -30,7 +30,7 @@ function App() {
           <Profil />
         </section>
 
-        <section id="c" data-name="Expérience" className="min-h-screen scroll-mt-24">
+        <section id="experience" data-name="Expérience" className="min-h-screen scroll-mt-24">
           <Experience />
         </section>
 

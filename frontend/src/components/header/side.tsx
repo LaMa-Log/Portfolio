@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   // Scroll fluide vers une section
-  const handleClick = (name, id) => {
+  const handleClick = (name:string , id:string) => {
     setActiveItem(name);
     const section = document.getElementById(id);
     if (section) {

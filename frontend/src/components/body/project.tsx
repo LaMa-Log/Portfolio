@@ -1,5 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import website from '../../assets/website.jpg';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const projects = [
   {
@@ -27,39 +33,58 @@ const projects = [
 
 export default function Project() {
   return (
-    <section className="px-6 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
-      <h1 className="text-4xl font-bold text-center mb-12">Projets</h1>
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+      className="px-6 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+    >
+      <motion.h1
+        variants={fadeInUp}
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Projets
+      </motion.h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={fadeInUp}
+            whileHover={{ scale: 1.03 }}
             className="relative group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-gray-200 transition-all duration-300"
           >
             {/* Hover button */}
-            <a
+            <motion.a
               href={project.link}
-              className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white"
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-4 right-4 z-10 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white"
             >
               Visiter
-            </a>
+            </motion.a>
 
             {/* Image */}
-            <img
+            <motion.img
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-cover bg-gray-100 dark:bg-gray-700"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             />
 
             {/* Content */}
-            <div className="p-6">
+            <motion.div className="p-6">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>
               <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
               <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">{project.date}</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
+

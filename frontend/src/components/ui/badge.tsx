@@ -1,4 +1,4 @@
-import React from "react";
+
 import { cn } from "@/lib/utils"; // Assure-toi que utils.ts existe
 
 type BadgeProps = {
