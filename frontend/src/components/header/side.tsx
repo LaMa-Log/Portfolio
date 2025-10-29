@@ -33,7 +33,6 @@ export default function Navbar() {
         if (visibleSection) {
           const name = visibleSection.target.getAttribute("data-name");
           setActiveItem(name);
-          console.log(name)
 
         }
       },
@@ -42,7 +41,6 @@ export default function Navbar() {
 
     navItems.forEach((item) => {
       const section = document.getElementById(item.id);
-      console.log(item.id)
       if (section) observer.observe(section);
     });
 

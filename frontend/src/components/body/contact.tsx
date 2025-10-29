@@ -37,7 +37,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://mahiratra-backend.vercel.app/api/contact", {
+      const res = await fetch("https://backendportfolio-three.vercel.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
