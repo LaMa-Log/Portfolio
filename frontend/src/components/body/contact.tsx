@@ -79,12 +79,12 @@ export default function Contact() {
         )
       }
 
-      <section className="w-full mt-40 md:mt-40 lg:mt-0 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 transition-colors duration-300">
+      <section className="w-full mt-40 md:mt-40 lg:mt-0 bg-gray-900 text-gray-100 px-6 transition-colors duration-300">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Infos de contact */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold">Contact</h2>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Vous pouvez me contacter pour toute collaboration, mission freelance ou échange professionnel.
             </p>
 
@@ -92,7 +92,7 @@ export default function Contact() {
               {/* Adresse */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Adresse</h3>
-                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-text-gray-300">
                   <li className="flex items-center gap-3">
                     <FaMapMarkerAlt className="text-indigo-500 text-xl" />
                     <a
@@ -110,7 +110,7 @@ export default function Contact() {
               {/* Téléphone */}
               <div>
                 <h3 className="text-2xl font-bold mt-10 mb-4">Téléphone</h3>
-                <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-4 text-gray-300">
                   <li className="flex items-center gap-3">
                     <FaPhone className="text-indigo-500 text-xl" />
                     <a href="tel:+261325943552" className="hover:underline">
@@ -123,20 +123,20 @@ export default function Contact() {
               {/* Email */}
               <div>
                 <h3 className="text-lg font-semibold mt-10 mb-1">Email</h3>
-                <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-md w-fit shadow-md">
-                  <span className="text-gray-800 dark:text-gray-100 font-medium select-all">
+                <div className="flex items-center gap-3 bg-gray-800 px-4 py-2 rounded-md w-fit shadow-md">
+                  <span className="text-gray-100 font-medium select-all">
                     {email}
                   </span>
                   <button
                     type="button"
                     onClick={handleCopy}
                     aria-label="Copier l'adresse email"
-                    className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+                    className="text-gray-300 hover:text-indigo-400 transition"
                   >
                     <FaClipboard className="w-5 h-5" />
                   </button>
                   {copied && (
-                    <span className="text-xs text-green-600 dark:text-green-400 font-medium animate-pulse">
+                    <span className="text-xs text-green-400 font-medium animate-pulse">
                       Copié !
                     </span>
                   )}
@@ -169,7 +169,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="hover:text-gray-800 dark:hover:text-white duration-150"
+                  className="hover:text-white duration-150"
                 >
                   <FaGithub />
                 </a> */}
@@ -178,9 +178,9 @@ export default function Contact() {
           </div>
 
           {/* Formulaire */}
-          <div className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Envoyer un message</h2>
-            <p className="text-gray-500 dark:text-gray-400">
+          <div className="space-y-6 bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h2 className="text-3xl font-bold text-white">Envoyer un message</h2>
+            <p className="text-gray-400">
               Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
             </p>
 
@@ -193,7 +193,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Votre nom"
                   required
-                  className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className= "bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 <input
                   type="email"
@@ -202,7 +202,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Votre email"
                   required
-                  className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className=" bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
               <input
@@ -212,7 +212,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Sujet"
                 required
-                className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <textarea
                 name="message"
@@ -221,7 +221,7 @@ export default function Contact() {
                 rows={5}
                 placeholder="Votre message"
                 required
-                className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 px-4 py-3 rounded-md w-full focus" >
+                className="bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" >
               </textarea>
 
               <button

@@ -12,7 +12,7 @@ export default function Profil() {
 
   return (
     <motion.section
-      className="w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      className="w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 bg-gray-900 text-gray-100 transition-colors duration-300"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -22,9 +22,9 @@ export default function Profil() {
         {/* Titre + Description */}
         <motion.div className="text-center space-y-2" variants={fadeInUp}>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Profil</h1>
-          <p className="leading-relaxed text-gray-700 dark:text-gray-300 max-w-5xl mx-auto px-2">
-            Product Owner Senior avec plus de 5 ans d’expérience dans la conception et le pilotage de produits digitaux (logiciels, applications mobiles, plateformes web).<br />
-            Spécialiste des méthodologies Agile/Scrum, j’ai dirigé et accompagné des équipes de 1 à 6 développeurs. Véritable leader et motivateur, je transforme la vision business en solutions digitales concrètes et performantes.<br />
+          <p className="leading-relaxed text-gray-300 max-w-5xl mx-auto px-2">
+            Product Owner Senior avec plus de 5 ans d’expérience dans la conception et le pilotage de produits digitaux (logiciels, applications mobiles, plateformes web).
+            Spécialiste des méthodologies Agile/Scrum, j’ai dirigé et accompagné des équipes de 1 à 6 développeurs. Véritable leader et motivateur, je transforme la vision business en solutions digitales concrètes et performantes.
             Passionné par la technologie et l’innovation, je recherche des missions freelance en remote au sein d’ESN francophones en Europe.
           </p>
         </motion.div>
@@ -38,12 +38,12 @@ export default function Profil() {
             variants={fadeInUp}
           >
             <motion.div
-              className="shadow-md rounded-2xl p-4 sm:p-2 transition-all duration-300 hover:shadow-lg bg-white dark:bg-gray-800"
+              className="shadow-md rounded-2xl p-4 sm:p-2 transition-all duration-300 hover:shadow-lg"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 150 }}
             >
               <h2 className="text-xl sm:text-2xl text-center font-bold mb-6">Info-contact</h2>
-              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+              <ul className="space-y-4 text-gray-300">
                 <li className="flex flex-wrap sm:flex-nowrap items-center gap-3 text-sm sm:text-base">
                   <FaAddressCard className="text-indigo-500 text-lg sm:text-xl" />
                   <span>Product Owner Senior</span>

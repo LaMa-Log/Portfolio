@@ -38,7 +38,7 @@ export default function Project() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      className="px-6 mt-40 md:mt-40 lg:mt-0  bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+      className="px-6 mt-40 md:mt-40 lg:mt-0 bg-gray-900 text-gray-100 transition-colors duration-300"
     >
       <motion.h1
         variants={fadeInUp}
@@ -53,7 +53,7 @@ export default function Project() {
             key={index}
             variants={fadeInUp}
             whileHover={{ scale: 1.03 }}
-            className="relative group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-gray-200 transition-all duration-300"
+            className="relative group bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-gray-200 transition-all duration-300"
           >
             {/* Hover button */}
             <motion.a
@@ -70,7 +70,7 @@ export default function Project() {
             <motion.img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover bg-gray-100 dark:bg-gray-700"
+              className="w-full h-48 object-cover bg-gray-700"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             />
@@ -78,8 +78,8 @@ export default function Project() {
             {/* Content */}
             <motion.div className="p-6">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-              <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
-              <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">{project.date}</p>
+              <p className="text-sm text-gray-300">{project.description}</p>
+              <p className="mt-4 text-xs text-gray-400">{project.date}</p>
             </motion.div>
           </motion.div>
         ))}

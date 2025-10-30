@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 
-const formations = [
+const experiences = [
   {
     titre:"Projet plateforme de formation en ligne",
     date: "Septembre 2025 – Aujourd’hui | Remote",
@@ -102,99 +102,90 @@ const formations = [
     ],
     badges: ["PHP","CodeIgniter" ]
   },
-
 ]
 
-
-
 export default function Experience() {
-  // Animation container (gère la séquence)
   const container = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2, duration: 0.5 },
+      transition: { staggerChildren: 0.25, duration: 0.6 },
     },
   };
 
-  // Animation pour chaque carte
   const item = {
     hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
     <motion.section
-      className="flex flex-col mt-40 md:mt-40 lg:mt-0 items-center justify-center mb-30 px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all duration-300"
       id="experience"
       data-name="Expérience"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
+      className="flex flex-col items-center justify-center px-6 py-20 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100"
     >
+      {/* Titre */}
       <motion.h1
-        className="text-center font-bold text-4xl md:text-5xl mb-6"
         variants={item}
+        className="text-center font-bold text-4xl md:text-5xl mb-4"
       >
         Expériences professionnelles
       </motion.h1>
 
+      {/* Description */}
       <motion.p
-        className="text-center max-w-2xl mb-10 text-gray-600 dark:text-gray-300"
         variants={item}
+        className="text-center max-w-2xl mb-12 text-gray-600 dark:text-gray-300 leading-relaxed"
       >
-        Voici un aperçu de mes expériences professionnelles récentes,
-        illustrant mes compétences techniques et ma capacité à m’adapter à
-        différents contextes.
+        Voici un aperçu de mes expériences professionnelles, illustrant mes
+        compétences techniques, ma rigueur et ma capacité à collaborer dans un
+        environnement Agile.
       </motion.p>
 
+      {/* Grille */}
       <motion.div
-        className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         variants={container}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl"
       >
-        {formations.map((formation, index) => (
+        {experiences.map((exp, index) => (
           <motion.div
             key={index}
             variants={item}
             whileHover={{ scale: 1.03 }}
-            className="w-full max-w-4xl border border-gray-300 dark:border-gray-700 hover:border-blue-400 rounded-2xl px-4 mb-8 bg-white dark:bg-gray-800 shadow-md transition-all duration-300"
+            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col justify-between"
           >
-            <h2 className="my-4 text-2xl font-semibold text-gray-800 dark:text-white">
-              {formation.titre}
-            </h2>
-
-            <div className="space-y-4">
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
-                <span className="font-bold text-xl">Contenu :</span>{" "}
-                {formation.contenu}
+            <div>
+              <h2 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+                {exp.titre}
+              </h2>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
+                <span className="font-semibold">Contenu :</span> {exp.contenu}
               </p>
 
-              <ul className="list-disc list-inside text-xs ml-5 text-gray-600 dark:text-gray-400">
-                {formation.descriptions.map((desc, i) => (
+              <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+                {exp.descriptions.map((desc, i) => (
                   <li key={i}>{desc}</li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap mb-2 gap-2 mt-2">
-                {formation.badges.map((badge, i) => (
+              <div className="flex flex-wrap gap-2">
+                {exp.badges.map((badge, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 text-xs font-medium bg-blue-600 dark:bg-blue-600 text-white rounded-full border border-blue-400 dark:border-blue-400"
+                    className="px-3 py-1 text-xs font-medium bg-indigo-600 text-white rounded-full"
                   >
                     {badge}
                   </span>
                 ))}
               </div>
-
-              <div className="text-right mt-2 text-xs text-gray-500 font-bold">
-                {formation.date}
-              </div>
             </div>
+            <p className="text-right text-xs text-gray-500 mt-4 font-medium">
+              {exp.date}
+            </p>
           </motion.div>
         ))}
       </motion.div>

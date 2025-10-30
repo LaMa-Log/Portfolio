@@ -46,7 +46,7 @@ const competences: Categorie[] = [
   },
 
     {
-    title: "Outils de concétion de prototypage",
+    title: "Outils de concéption de prototypage",
     outils: [
       { name: "Figma", niveau: "bon" },
       { name: "Draw.io", niveau: "bon" },
@@ -54,7 +54,7 @@ const competences: Categorie[] = [
   },
 
     {
-    title: "Bases de données",
+    title: "Base des données",
     outils: [
       { name: "MySQL", niveau: "base" },
       { name: "SQL", niveau: "bon" },
@@ -78,13 +78,13 @@ export default function Competence() {
   const getBadgeColor = (niveau: string) => {
     switch (niveau) {
       case "base":
-        return "bg-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
+        return "bg-gray-700 text-gray-200";
       case "bon":
         return "bg-blue-500/20 text-blue-400";
       case "avancé":
         return "bg-green-500/20 text-green-400";
       default:
-        return "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
+        return "bg-gray-700 text-gray-200";
     }
   };
 
@@ -94,7 +94,7 @@ export default function Competence() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      className="mb-10 px-6 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+      className="mb-10 px-6 bg-gray-900 text-gray-100 transition-colors duration-300"
     >
       {/* Titre */}
       <motion.div variants={fadeInUp} className="flex flex-col w-full border-b-2 border-gray-300 dark:border-gray-700 mb-8">
@@ -103,7 +103,7 @@ export default function Competence() {
             Compétences
           </h1>
           <div className="flex gap-3">
-            <span className="px-3 py-1 rounded-full bg-gray-300 dark:bg-gray-700 font-medium text-gray-800 dark:text-gray-200">Base</span>
+            <span className="px-3 py-1 rounded-full bg-gray-700 font-mediutext-gray-200">Base</span>
             <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 font-medium">Bon</span>
             <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 font-medium">Avancé</span>
           </div>
@@ -113,7 +113,7 @@ export default function Competence() {
       {/* Intro */}
       <motion.p
         variants={fadeInUp}
-        className="text-center md:text-base text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"
+        className="text-center md:text-bastext-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"
       >
         Voici un aperçu des compétences techniques que j’ai acquises au fil de mes expériences et de mes projets. 
         Chaque domaine regroupe les outils et technologies que je maîtrise à différents niveaux, allant des bases aux connaissances avancées.
@@ -126,9 +126,9 @@ export default function Competence() {
             key={index}
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+            className=" border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
           >
-            <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-lg font-semibold mb-4 text-white">
               {cat.title}
             </h2>
             <div className="flex flex-wrap gap-3">
