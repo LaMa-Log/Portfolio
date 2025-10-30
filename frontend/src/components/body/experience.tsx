@@ -120,13 +120,11 @@ export default function Experience() {
 
   return (
     <motion.section
-      id="experience"
-      data-name="Expérience"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
-      className="flex flex-col items-center justify-center px-6 py-20 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+      className="flex flex-col items-center justify-center px-6 py-10 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100"
     >
       {/* Titre */}
       <motion.h1

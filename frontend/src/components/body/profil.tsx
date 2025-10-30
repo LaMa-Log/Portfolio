@@ -20,7 +20,9 @@ export default function Profil() {
       <motion.div className="max-w-7xl mx-auto w-full space-y-8">
         
         {/* Titre + Description */}
-        <motion.div className="text-center space-y-2" variants={fadeInUp}>
+        <motion.div className="text-center space-y-2" 
+          variants={fadeInUp}>
+            
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Profil</h1>
           <p className="leading-relaxed text-gray-300 max-w-5xl mx-auto px-2">
             Product Owner Senior avec plus de 5 ans d’expérience dans la conception et le pilotage de produits digitaux (logiciels, applications mobiles, plateformes web).
