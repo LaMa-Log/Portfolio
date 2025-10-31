@@ -1,7 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Home from "./components/body/home";
 import Profil from "./components/body/profil";
-import Experience from "./components/body/experience";
+import Expert from "./components/body/experience";
 import Project from "./components/body/project";
 import Competence from "./components/body/competence";
 import Contact from "./components/body/contact";
@@ -21,27 +21,27 @@ function App() {
         <Side />
         
         {/*Sections principales */}
-        <section id="accueil" data-name="Accueil" className="min-h-screen scroll-mt-[350px] md:scroll-mt-[120px]">
+        <section id="accueil" data-name="Accueil" className="scroll-mt-[350px] md:scroll-mt-[400px] lg:scroll-mt-[100px]">
           <Home />
         </section>
 
-        <section id="profil" data-name="Profil" className="min-h-screen scroll-mt-[400px] md:scroll-mt-[120px]">
+        <section id="profil" data-name="Profil" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
           <Profil />
         </section>
 
-        <section  id="experience"  data-name="Expérience" className="min-h-screen scroll-mt-[400px] md:scroll-mt-[120px]">
-          <Experience />
+        <section  id="experience"  data-name="Expériences" className=" mb-40 md:mb-40 mb:40 scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+          <Expert />
         </section>
 
-        <section id="competence" data-name="Compétence" className="min-h-screen scroll-mt-[400px] md:scroll-mt-[120px]">
+        <section id="competence" data-name="Compétences" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
           <Competence />
         </section>
 
-        <section id="projects" data-name="Projects" className="min-h-screen scroll-mt-[400px] md:scroll-mt-[120px]">
+        <section id="proj" data-name="Projets" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
           <Project />
         </section>
 
-        <section id="contact" data-name="Contact" className="min-h-screen scroll-mt-[400px] md:scroll-mt-[120px]">
+        <section id="contact" data-name="Contact" className=" mb-30 scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
           <Contact />
         </section>
 

@@ -12,7 +12,7 @@ export default function Profil() {
 
   return (
     <motion.section
-      className="w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 bg-gray-900 text-gray-100 transition-colors duration-300"
+      className="w-full min-h-screen pb-30 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 bg-gray-900 text-gray-100 transition-colors duration-300"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -44,8 +44,8 @@ export default function Profil() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 150 }}
             >
-              <h2 className="text-xl sm:text-2xl text-center font-bold mb-6">Info-contact</h2>
-              <ul className="space-y-4 text-gray-300">
+              <h2 className="text-xl sm:text-2xl text-center font-bold mb-4">Info-contact</h2>
+              <ul className="space-y-2 text-gray-300">
                 <li className="flex flex-wrap sm:flex-nowrap items-center gap-3 text-sm sm:text-base">
                   <FaAddressCard className="text-indigo-500 text-lg sm:text-xl" />
                   <span>Product Owner Senior</span>
@@ -68,11 +68,11 @@ export default function Profil() {
 
           {/* Parcours Académiques */}
           <motion.div
-            className="w-full lg:w-3/4 space-y-8"
+            className="w-full lg:w-3/4 space-y-6"
             variants={fadeInUp}
           >
             <motion.div
-              className="bg-gray-800 text-gray-100 shadow-md rounded-2xl p-4 sm:p-4 transition-all duration-300 hover:shadow-lg"
+              className="bg-gray-800 text-gray-100 shadow-md rounded-2xl p-2 sm:p-2 transition-all duration-300 hover:shadow-lg"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 150 }}
             >

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import logo from '../../assets/logo.jpg'
+import { useState, useEffect } from "react";
 
 export default function Side() {
 
@@ -10,9 +9,9 @@ export default function Side() {
       const navItems = [
         { name: "Accueil", id: "accueil" },
         { name: "Profil", id: "profil" },
-        { name: "Expérience", id: "experience" },
-        { name: "Compétence", id: "competence" },
-        { name: "Projects", id: "projects" },
+        { name: "Expériences", id: "experience" },
+        { name: "Compétences", id: "competence" },
+        { name: "Projets", id: "proj" },
         { name: "Contact", id: "contact" },
       ];
 
@@ -49,7 +48,7 @@ export default function Side() {
 
   return (
         <header className="bg-neutral-800 shadow-md sticky top-0 z-50 w-full">
-          <nav className="w-full max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 sm:px-6 py-3">
+          <nav className="w-full mx-auto flex flex-wrap items-center justify-between px-4 sm:px-6 py-3">
             {/* Logo */}
             <div className="flex items-center gap-2 text-lg sm:text-xl font-bold text-indigo-600 dark:text-white">
               <div className="bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center">

@@ -33,7 +33,7 @@ const StackedListBadgeActionButton = () => {
             </h3>
 
             <span
-              className={`mt-2 sm:mt-0 self-start sm:self-auto px-3 py-1 rounded-full text-xs sm:text-sm font-medium ${
+              className={`mt-2 sm:mt-0 md:mt-0 lg:mt-0 self-start sm:self-auto px-3 py-1 rounded-full text-xs md:text-sm lg:text-base font-medium ${
                 item.status === "Diplome"
                   ? "bg-green-800 text-green-100"
                   : item.status === "Certificat" 

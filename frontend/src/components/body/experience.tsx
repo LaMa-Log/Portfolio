@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { motion } from "framer-motion";
 
 const experiences = [
@@ -104,7 +104,7 @@ const experiences = [
   },
 ]
 
-export default function Experience() {
+export default function Expert() {
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -124,7 +124,7 @@ export default function Experience() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
-      className="flex flex-col items-center justify-center px-6 py-10 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+      className="flex flex-col items-center justify-center px-6 "
     >
       {/* Titre */}
       <motion.h1
@@ -137,7 +137,7 @@ export default function Experience() {
       {/* Description */}
       <motion.p
         variants={item}
-        className="text-center max-w-2xl mb-12 text-gray-600 dark:text-gray-300 leading-relaxed"
+        className="text-center max-w-2xl mb-12 text-gray-300 leading-relaxed"
       >
         Voici un aperçu de mes expériences professionnelles, illustrant mes
         compétences techniques, ma rigueur et ma capacité à collaborer dans un
@@ -154,17 +154,17 @@ export default function Experience() {
             key={index}
             variants={item}
             whileHover={{ scale: 1.03 }}
-            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col justify-between"
+            className=" bg-gray-800 border border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col justify-between"
           >
             <div>
-              <h2 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+              <h2 className="text-xl font-semibold text-indigo-400 mb-2">
                 {exp.titre}
               </h2>
-              <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
+              <p className="text-gray-300 text-sm mb-3">
                 <span className="font-semibold">Contenu :</span> {exp.contenu}
               </p>
 
-              <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+              <ul className="list-disc list-inside text-sm text-gray-400 space-y-1 mb-4">
                 {exp.descriptions.map((desc, i) => (
                   <li key={i}>{desc}</li>
                 ))}

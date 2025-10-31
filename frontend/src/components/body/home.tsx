@@ -15,7 +15,7 @@ export default function Home() {
       initial="hidden"
       animate="visible"
       variants={fadeInUp}
-      className="w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 bg-gray-900 text-gray-100 transition-colors duration-300 flex items-center justify-center overflow-hidden"
+      className="w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-2 transition-colors duration-300 flex items-center justify-center overflow-hidden"
     >
       <div className="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16 py-10">
         

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import website from '../../assets/website.jpg';
 
@@ -38,7 +37,7 @@ export default function Project() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      className="px-6 mt-40 md:mt-40 lg:mt-0 bg-gray-900 text-gray-100 transition-colors duration-300"
+      className=" min-h-screen px-6 my-30 lg:my-40 bg-gray-900 text-gray-100 transition-colors duration-300"
     >
       <motion.h1
         variants={fadeInUp}
