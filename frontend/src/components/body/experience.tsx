@@ -3,7 +3,8 @@ import React from "react";
 
 const experiences = [
   {
-    titre:"Projet plateforme de formation en ligne",
+    titre:"Product Owner Senior — Plateforme de Formation en Ligne",
+    Entreprise:"TEM France",
     date: "Septembre 2025 – Aujourd’hui | Remote",
     contenu: "Conception et mise en place d’une plateforme de formation en ligne",
     descriptions: [
@@ -16,7 +17,8 @@ const experiences = [
     badges: ["React.JS", "Tailwind CSS", "Node.js", "MongoDB", "Postman"]
   },
     {
-    titre: "Product Owner – Nancia",
+    titre: "Product Owner — Logiciel de Transport Maritime ",
+    Entreprise:"Saint Jude",
     date: "Juin 2025 – Août 2025 | Remote",
     contenu: "Développement d’un logiciel et d’une application mobile de gestion de marchandises et transport maritime",
     descriptions: [
@@ -29,7 +31,8 @@ const experiences = [
     badges: ["React.JS", "Tailwind CSS", "Node.js", "MongoDB", "Postman","Express.js"]
   },
     {
-    titre: "Product Owner Fonctionnel – Promabio SARL ",
+    titre: "Product Owner Fonctionnel – Intranet Collaboratif",
+    Entreprise:"Promabio SARL",
     date: "Janvier 2025 – Mai 2025 | Sur site",
     contenu: "Déploiement d’un intranet collaboratif",
     descriptions: [
@@ -42,9 +45,10 @@ const experiences = [
     badges: ["React.JS", "Tailwind CSS", "Node.js", "MongoDB", "Postman","Supabase", "Render", "Jira", "Figma"]
   },
     {
-    titre: "Product Owner – Promabio SARL",
+    titre: "Product Owner – Application Mobile de Collecte de Données",
+    Entreprise:"Promabio SARL",
     date: "Décembre 2023 – Décembre 2024 | Sur site",
-    contenu: "Application mobile de collecte de données (traçabilité et productivité dans la filière vanille)",
+    contenu: "Application mobile de traçabilité et productivité dans la filière vanille",
     descriptions: [
       "Définition de la vision produit et alignement stratégique avec la direction et les producteurs",
       "Pilotage du backlog produit, rédaction des user stories et priorisation",
@@ -57,6 +61,7 @@ const experiences = [
   },
       {
     titre: "Product Owner – Application Mobile Quiz Biblique",
+    Entreprise:"Tily Eto Madagasikara",
     date: "Juillet 2023 – Août 2023",
     contenu: "Application mobile interactive pour un grand événement jeunesse",
     descriptions: [
@@ -69,6 +74,7 @@ const experiences = [
   },
   {
     titre: "Product Owner – Logiciel de Gestion de Marchandises",
+    Entreprise:"Nancia",
     date: "Mai 2023 – Juin 2023",
     contenu: "Mai 2023 – Juin 2023",
     descriptions: [
@@ -81,6 +87,7 @@ const experiences = [
   },
     {
     titre: "Product Owner – Site Internet Promabio SARL",
+    Entreprise:"Promabio SARL",
     date: "Octobre 2021 – Novembre 2021",
     contenu: "Développement et mise en ligne d’un site web",
     descriptions: [
@@ -92,6 +99,7 @@ const experiences = [
   },
   {
     titre: "Product Owner – Logiciel de gestion du flux de transformation de vanille",
+    Entreprise:"Promabio SARL",
     date: "Avril 2020 – Septembre 2021",
     contenu: "Logiciel de suivi et de traçabilité du processus de transformation de la vanille",
     descriptions: [
@@ -131,6 +139,10 @@ const Experiences: React.FC = () => {
               </span>
             </div>
 
+            <p className="text-sm text-blue-400 font-medium mb-2">
+              {exp.Entreprise}
+            </p>
+
             <p className="text-gray-300 mb-3">
               {exp.contenu}
             </p>
@@ -158,5 +170,4 @@ const Experiences: React.FC = () => {
   );
 };
 
-export default Experiences;
-
+export default Experiences

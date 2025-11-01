@@ -65,7 +65,7 @@ export default function Home() {
             <motion.button
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/CV_ADAM_TEFOR.pdf";
+                  link.href = "/Njeva_PO_CV.pdf";
                   link.download = "CV_ADAM_TEFOR.pdf";
                   document.body.appendChild(link);
                   link.click();
