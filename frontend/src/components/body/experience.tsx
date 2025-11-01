@@ -130,7 +130,7 @@ const Experiences: React.FC = () => {
             key={i}
             className="bg-gray-800 shadow-lg rounded-2xl p-6 md:p-8 border border-gray-700 hover:shadow-xl  hover:border-blue-500 transition-all duration-300"
           >
-            <div className="flex flex-col md:flex-row justify-between md:items-center mb-3">
+            <div className="flex flex-col md:flex-row justify-between md:items-center mb-1">
               <h3 className="text-xl md:text-2xl font-semibold text-gray-100">
                 {exp.titre}
               </h3>
@@ -139,7 +139,7 @@ const Experiences: React.FC = () => {
               </span>
             </div>
 
-            <p className="text-sm text-blue-400 font-medium mb-2">
+            <p className="text-base text-blue-400 font-medium mb-6">
               {exp.Entreprise}
             </p>
 
