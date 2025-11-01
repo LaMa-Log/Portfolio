@@ -15,7 +15,7 @@ const fadeInUp = {
 
 const projects = [
       {
-    title: "Promabio SARL: Site Web Institutionnel",
+    title: "Promabio SARL - Site Web Institutionnel",
     image: promabio,
     description: "Une vitrine digitale claire et moderne pour présenter l’entreprise et crédibiliser son image auprès de ses partenaires.",
     link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
