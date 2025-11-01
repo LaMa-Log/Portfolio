@@ -22,7 +22,7 @@ const projects = [
   },
 
     {
-    title: "Logiciel de Gestion de Marchandises: Grossiste Multi-boutiques",
+    title: "Logiciel de Gestion de Marchandises - Grossiste Multi-boutiques",
     image: SupermarchePro,
     description: "Optimisation du suivi de stock, des ventes et de l’approvisionnement pour une meilleure rentabilité.",
     link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
@@ -43,14 +43,14 @@ const projects = [
     link: "/projects/web-development"
   },
         {
-    title: "Transformation & Traçabilité Application Mobile de Traçabilité: Filière Vanille",
+    title: "Transformation & Traçabilité - Application Mobile de Traçabilité: Filière Vanille",
     image: grossiste,
     description: "Digitaliser la collecte terrain pour garantir transparence, certification et amélioration continue de la qualité.",
     link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
   },
 
   {
-    title: "Intranet Collaboratif: Modernisation de la Communication Interne",
+    title: "Intranet Collaboratif - Modernisation de la Communication Interne",
     image: intranet,
     description: "Un espace unifié pour fluidifier les échanges, centraliser les ressources et renforcer la collaboration d’équipe.",
     link: "/projects/web-development"
@@ -102,7 +102,7 @@ export default function Project() {
               />
             </div>
             {/* Content */}
-            <motion.div className="p-3">
+            <motion.div className="p-6">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>
               <p className="text-sm text-gray-300">{project.description}</p>
             </motion.div>
