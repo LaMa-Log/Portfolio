@@ -1,5 +1,12 @@
 import { motion } from 'framer-motion';
-import website from '../../assets/website.jpg';
+import intranet from '../../assets/intranet.jpeg';
+import saintJUD from '../../assets/sainJUD.jpeg'
+import tily from '../../assets/tily.jpeg'
+import promabio from '../../assets/promabio.jpeg'
+import SupermarchePro from '../../assets/SupermrchePro.jpeg'
+import grossiste from '../../assets/grossiste.jpeg'
+import { FaGlobe } from 'react-icons/fa';
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -7,27 +14,54 @@ const fadeInUp = {
 };
 
 const projects = [
-  {
-    title: "Creative Branding",
-    image: website,
-    description: "Maecenas ante magna. Suspendisse potenti. Curabitur eleifend nisi non magna vulputate.",
-    link: "/projects/branding",
-    date: "Janvier 2023 - Présent",
-  },
-  {
-    title: "Web Development",
-    image: website,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/projects/web-development",
-    date: "Février 2023 - Présent",
-  },
-  {
-    title: "Design Systems",
-    image: website,
-    description: "Praesent euismod varius tellus, vel bibendum nunc interdum at. Donec vehicula diam vel metus.",
-    link: "/projects/design-systems",
+      {
+    title: "Promabio SARL: Site Web Institutionnel",
+    image: promabio,
+    description: "Une vitrine digitale claire et moderne pour présenter l’entreprise et crédibiliser son image auprès de ses partenaires.",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
     date: "Mars 2023 - Présent",
   },
+
+    {
+    title: "Logiciel de Gestion de Marchandises: Grossiste Multi-boutiques",
+    image: SupermarchePro,
+    description: "Optimisation du suivi de stock, des ventes et de l’approvisionnement pour une meilleure rentabilité.",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
+    date: "Mars 2023 - Présent",
+  },
+
+
+  {
+    title: "Plateforme Web & Mobile de Logistique Maritime",
+    image: saintJUD,
+    description: "Digitaliser le transport de marchandises pour améliorer la performance, la fiabilité et la visibilité en temps réel.",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
+    date: "Mars 2023 - Présent",
+  },
+
+  {
+    title: "Plateforme de Formation en Ligne",
+    image: tily,
+    description: "Solution digitale moderne pour transformer l’apprentissage à distance et valoriser le partage de compétences.",
+    link: "/projects/web-development",
+    date: "Janvier 2023 - Présent",
+  },
+        {
+    title: "Transformation & Traçabilité Application Mobile de Traçabilité: Filière Vanille",
+    image: grossiste,
+    description: "Digitaliser la collecte terrain pour garantir transparence, certification et amélioration continue de la qualité.",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
+    date: "Mars 2023 - Présent",
+  },
+
+  {
+    title: "Intranet Collaboratif: Modernisation de la Communication Interne",
+    image: intranet,
+    description: "Un espace unifié pour fluidifier les échanges, centraliser les ressources et renforcer la collaboration d’équipe.",
+    link: "/projects/web-development",
+    date: "Février 2023 - Présent",
+  }
+
 ];
 
 export default function Project() {
@@ -57,23 +91,22 @@ export default function Project() {
             {/* Hover button */}
             <motion.a
               href={project.link}
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="absolute top-4 right-4 z-10 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white"
+              className="absolute top-2 right-2 z-10 hover:text-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold "
             >
-              Visiter
+              <FaGlobe className="text-3xl hover:text-4xl transition-all duration-300 " />
+ 
             </motion.a>
 
             {/* Image */}
-            <motion.img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover bg-gray-700"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            />
-
+            <div className="w-full h-60 bg-gray-900 flex items-center justify-center overflow-hidden rounded-t-xl">
+              <motion.img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-contain transition-transform duration-300"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
             {/* Content */}
             <motion.div className="p-6">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>

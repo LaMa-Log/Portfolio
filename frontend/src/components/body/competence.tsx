@@ -94,19 +94,15 @@ export default function Competence() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      className="mb-10 px-6 bg-gray-900 text-gray-100 transition-colors duration-300"
+      className="mb-10 px-6 text-gray-100 transition-colors duration-300"
     >
       {/* Titre */}
-      <motion.div variants={fadeInUp} className="flex flex-col w-full border-b-2 border-gray-300 dark:border-gray-700 mb-8">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-          <h1 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white tracking-tight leading-snug">
+      <motion.div variants={fadeInUp} className="flex flex-col">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-4">
+          <h1 className="text-4xl font-bold mb-2  text-white tracking-tight leading-snug">
             Compétences
+
           </h1>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 rounded-full bg-gray-700 font-mediutext-gray-200">Base</span>
-            <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 font-medium">Bon</span>
-            <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 font-medium">Avancé</span>
-          </div>
         </div>
       </motion.div>
 
@@ -144,7 +140,24 @@ export default function Competence() {
             </div>
           </motion.div>
         ))}
+        <div className=" flex justify-center">
+          <div className="flex gap-4 flex-wrap justify-center items-center text-sm">
+            <span className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded-full bg-gray-700" />
+              <span className="text-gray-300">Base</span>
+            </span>
+          <span className="flex items-center gap-2">
+              <span className="w-4 h-4 rounded-full bg-blue-500/20 border border-blue-400" />
+              <span className="text-blue-400">Bon</span>
+            </span>
+          <span className="flex items-center gap-2">
+            <span className="w-4 h-4 rounded-full bg-green-500/20 border border-green-400" />
+            <span className="text-green-400">Avancé</span>
+          </span>
+          </div>
+        </div>
       </div>
+
     </motion.section>
   );
 }
