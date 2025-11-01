@@ -9,9 +9,9 @@ export default function Side() {
       const navItems = [
         { name: "Accueil", id: "accueil" },
         { name: "Profil", id: "profil" },
-        { name: "Expériences", id: "experience" },
+        { name: "Expériences", id: "experiences" },
         { name: "Compétences", id: "competence" },
-        { name: "Projets", id: "proj" },
+        { name: "Projets", id: "project" },
         { name: "Contact", id: "contact" },
       ];
 

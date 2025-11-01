@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Home from "./components/body/home";
 import Profil from "./components/body/profil";
-import Expert from "./components/body/experience";
+import Experiences from "./components/body/experience";
 import Project from "./components/body/project";
 import Competence from "./components/body/competence";
 import Contact from "./components/body/contact";
@@ -29,15 +29,15 @@ function App() {
           <Profil />
         </section>
 
-        <section  id="experience"  data-name="Expériences" className=" mb-40 md:mb-40 mb:40 scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
-          <Expert />
+        <section  id="experiences"  data-name="Expériences" className=" mb-40 md:mb-40 mb:40 scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+          <Experiences />
         </section>
 
         <section id="competence" data-name="Compétences" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
           <Competence />
         </section>
 
-        <section id="proj" data-name="Projets" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
+        <section id="project" data-name="Projets" className=" scroll-mt-[400px] md:scroll-mt-[450px] lg:scroll-mt-[100px]">
           <Project />
         </section>
 

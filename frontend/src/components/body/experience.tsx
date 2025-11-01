@@ -1,5 +1,5 @@
 
-import { motion } from "framer-motion";
+import React from "react";
 
 const experiences = [
   {
@@ -104,89 +104,59 @@ const experiences = [
   },
 ]
 
-export default function Expert() {
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.25, duration: 0.6 },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
-
+const Experiences: React.FC = () => {
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={container}
-      className="flex flex-col items-center justify-center px-6 "
-    >
-      {/* Titre */}
-      <motion.h1
-        variants={item}
-        className="text-center font-bold text-4xl md:text-5xl mb-4"
-      >
-        Expériences professionnelles
-      </motion.h1>
+    <section className="w-full px-4 md:px-10 bg-gray-900">
+      <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-100">
+        Expériences Professionnelles
+      </h2>
+      <p className="text-center text-gray-300 p-8 ">
+        Au fil de mes projets, j’ai eu l’opportunité de piloter la conception, le développement et la mise en œuvre de solutions numériques variées, allant d’applications web et mobiles à des plateformes collaboratives.
+        Ces expériences m’ont permis de renforcer mes compétences en gestion de produit, coordination d’équipes agiles et communication entre les parties prenantes.
+        Chaque mission a été une occasion d’allier vision stratégique et exécution technique, tout en veillant à la qualité et à la valeur livrée aux utilisateurs.
+      </p>
 
-      {/* Description */}
-      <motion.p
-        variants={item}
-        className="text-center max-w-2xl mb-12 text-gray-300 leading-relaxed"
-      >
-        Voici un aperçu de mes expériences professionnelles, illustrant mes
-        compétences techniques, ma rigueur et ma capacité à collaborer dans un
-        environnement Agile.
-      </motion.p>
-
-      {/* Grille */}
-      <motion.div
-        variants={container}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl"
-      >
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            variants={item}
-            whileHover={{ scale: 1.03 }}
-            className=" bg-gray-800 border border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col justify-between"
+      <div className="flex flex-col gap-8">
+        {experiences.map((exp, i) => (
+          <div
+            key={i}
+            className="bg-gray-800 shadow-lg rounded-2xl p-6 md:p-8 border border-gray-700 hover:shadow-xl  hover:border-blue-500 transition-all duration-300"
           >
-            <div>
-              <h2 className="text-xl font-semibold text-indigo-400 mb-2">
+            <div className="flex flex-col md:flex-row justify-between md:items-center mb-3">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-100">
                 {exp.titre}
-              </h2>
-              <p className="text-gray-300 text-sm mb-3">
-                <span className="font-semibold">Contenu :</span> {exp.contenu}
-              </p>
-
-              <ul className="list-disc list-inside text-sm text-gray-400 space-y-1 mb-4">
-                {exp.descriptions.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap gap-2">
-                {exp.badges.map((badge, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-xs font-medium bg-indigo-600 text-white rounded-full"
-                  >
-                    {badge}
-                  </span>
-                ))}
-              </div>
+              </h3>
+              <span className="mt-2 md:mt-0 text-sm text-gray-400 italic">
+                {exp.date}
+              </span>
             </div>
-            <p className="text-right text-xs text-gray-500 mt-4 font-medium">
-              {exp.date}
+
+            <p className="text-gray-300 mb-3">
+              {exp.contenu}
             </p>
-          </motion.div>
+
+            <ul className="list-disc list-inside text-gray-300 space-y-1 mb-4">
+              {exp.descriptions.map((d, j) => (
+                <li key={j}>{d}</li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-2">
+              {exp.badges.map((badge, k) => (
+                <span
+                  key={k}
+                  className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-xs font-medium"
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
-      </motion.div>
-    </motion.section>
+      </div>
+    </section>
   );
-}
+};
+
+export default Experiences;
+
