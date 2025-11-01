@@ -18,16 +18,14 @@ const projects = [
     title: "Promabio SARL: Site Web Institutionnel",
     image: promabio,
     description: "Une vitrine digitale claire et moderne pour présenter l’entreprise et crédibiliser son image auprès de ses partenaires.",
-    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
-    date: "Mars 2023 - Présent",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
   },
 
     {
     title: "Logiciel de Gestion de Marchandises: Grossiste Multi-boutiques",
     image: SupermarchePro,
     description: "Optimisation du suivi de stock, des ventes et de l’approvisionnement pour une meilleure rentabilité.",
-    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
-    date: "Mars 2023 - Présent",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
   },
 
 
@@ -35,31 +33,27 @@ const projects = [
     title: "Plateforme Web & Mobile de Logistique Maritime",
     image: saintJUD,
     description: "Digitaliser le transport de marchandises pour améliorer la performance, la fiabilité et la visibilité en temps réel.",
-    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
-    date: "Mars 2023 - Présent",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
   },
 
   {
     title: "Plateforme de Formation en Ligne",
     image: tily,
     description: "Solution digitale moderne pour transformer l’apprentissage à distance et valoriser le partage de compétences.",
-    link: "/projects/web-development",
-    date: "Janvier 2023 - Présent",
+    link: "/projects/web-development"
   },
         {
     title: "Transformation & Traçabilité Application Mobile de Traçabilité: Filière Vanille",
     image: grossiste,
     description: "Digitaliser la collecte terrain pour garantir transparence, certification et amélioration continue de la qualité.",
-    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/",
-    date: "Mars 2023 - Présent",
+    link:"https://portfolio-six-theta-qsmr10tp8l.vercel.app/"
   },
 
   {
     title: "Intranet Collaboratif: Modernisation de la Communication Interne",
     image: intranet,
     description: "Un espace unifié pour fluidifier les échanges, centraliser les ressources et renforcer la collaboration d’équipe.",
-    link: "/projects/web-development",
-    date: "Février 2023 - Présent",
+    link: "/projects/web-development"
   }
 
 ];
@@ -108,10 +102,9 @@ export default function Project() {
               />
             </div>
             {/* Content */}
-            <motion.div className="p-6">
+            <motion.div className="p-3">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>
               <p className="text-sm text-gray-300">{project.description}</p>
-              <p className="mt-4 text-xs text-gray-400">{project.date}</p>
             </motion.div>
           </motion.div>
         ))}
